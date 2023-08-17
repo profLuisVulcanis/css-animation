@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Transformers</title>
+    <link rel="icon" href="./img/logo.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        div.ball {
+            width: 50px;
+            height: 50px;
+            background: red;
+            border-radius: 50%;
+            animation-name: ball;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        div.square {
+            width: 80px;
+            height: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: green;
+            color: white;
+            animation-name: racing;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+        }
+        .dv1 { animation-timing-function: linear; }
+        .dv2 { animation-timing-function: ease; }
+        .dv3 { animation-timing-function: ease-in; }
+        .dv4 { animation-timing-function: ease-out; }
+        .dv5 { animation-timing-function: ease-in-out; }
+        article.long { height: 120px; }
+        div.box {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: lighter;
+            animation-name: turn;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        /*Aplicando a animação*/
+        @keyframes ball {
+            to {
+                background: blue;
+                border-radius: 0%;
+                transform: translateX(350px);
+            }
+        }
+        @keyframes racing {
+            from { transform: translateX(0px); }
+            to { transform: translateX(350px); }
+        }
+        @keyframes turn {
+            0% { top: 0px; left: 0px; }
+            25% { top: 0px; left: 350px; }
+            50% { top: 70px; left: 350px; }
+            75% { top: 70px; left: 0px; }
+            100% { top: 0px; left: 0px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header> 
+        <h1>Usando Animations</h1>
+    </header>
+
+    <main>
+        <section>
+            <header.mainHeader>
+                <h2>Usando a propriedade animation</h2>
+            </header>
+            <article>
+                <div class="ball"></div>
+            </article>
+            <article>
+                <div class="square dv1">linear</div>
+                <div class="square dv2">ease</div>
+                <div class="square dv3">ease-in</div>
+                <div class="square dv4">ease-out</div>
+                <div class="square dv5">ease-in-out</div>
+            </article>
+            <article class="long">
+                <div class="box">BOX</div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Este material foi desenvolvido por <a href="mailto:webcursoprofessorluis@gmail.com" title="Enviar um e-mail">Luis Vulcanis</a> para o <a href="https://youtube.com/@professorluis" target="_blank" rel="noopener noreferrer">Canal do Prof. Luis Vulcanis</a> &copy; 2023.
+        </address>
+    </footer>
+    
+</body>
+</html>

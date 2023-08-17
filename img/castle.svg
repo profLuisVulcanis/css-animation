@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 256 301" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-384.5 -381.86)" stroke="#000">
+  <path d="m385 447.36h115v-65h-25v30h-20v-30h-25v30h-20v-30h-25v65z" fill="#ff0"/>
+  <path d="m405 452.36h75v75h10v-20h15v20h15v-20h15v20h10v-75h75v230h-215v-230z" fill="#ff0"/>
+  <path d="m420 492.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m525 447.36h115v-65h-25v30h-20v-30h-25v30h-20v-30h-25v65z" fill="#ff0"/>
+  <path d="m450 492.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m590 492.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m560 492.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m420 567.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m450 567.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m590 567.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m560 567.36h15v-20c0-10-15-10-15 0v20z" fill="#dc1400"/>
+  <path d="m490 677.36h40v-60c0-30-40-30-40 0v60z" fill="#dc1400"/>
+ </g>
+</svg>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Transformers</title>
+    <link rel="icon" href="./img/logo.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        article.long {
+            height: 400px;
+            width: 440px;
+            margin: auto;
+            background: linear-gradient(skyblue 50%,green 51%);
+            overflow: hidden;
+        }
+        div.cloud {
+            position: relative;
+            width: 150px;
+            height: 80px;
+            background: url(./img/cloud.svg);
+            background-size: 230px;
+            background-position: center;
+            left: 450px;
+            animation-name: cloud;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            z-index: 1;
+        }
+        div.castle {
+            position: relative;
+            width: 150px;
+            height: 200px;
+            background: url(./img/castle.svg);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            top: 40px;
+            left: 50px;
+            z-index: 7;
+        }
+        div.flagpole {
+            position: relative;
+            width: 8px;
+            height: 150px;
+            background: linear-gradient(to right, #d8691b, #361f04);
+            top: -260px;
+            left: 80px;
+            z-index: 3;
+        }
+        div.flag {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 80px;
+            height: 60px;
+            top: -410px;
+            left: 87px;
+            z-index: 5;
+        }
+        div.stripe1 {
+            background-color: red;
+            width: 20px;
+            height: 50px;
+            animation-name: stripeA;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        div.stripe2 {
+            background-color: red;
+            width: 20px;
+            height: 50px;
+            transform: skewY(10px);
+            animation-name: stripeB;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        div.river {
+            position: relative;
+            width: 550px;
+            height: 250px;
+            background: url(./img/river.svg);
+            background-size: 50px;
+            background-repeat: repeat-x;
+            top: -150px;
+            left: -70px;
+            animation-name: river;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            z-index: 9;
+        }
+        div.boat {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            top: -480px;
+            left: -150px;
+            z-index: 11;
+            overflow: hidden;
+            animation: navigate 30s infinite;
+        }
+        div.boat img {
+            animation: swing 3s alternate-reverse infinite ease-in-out;
+        }
+
+        /*Animações*/
+        @keyframes cloud {
+            from { left: 450px; }
+            to { left: -150px; }
+        }
+        @keyframes stripeA {
+            from { transform: skewY(15deg); opacity: 1; }
+            to { transform: skewY(-15deg); opacity: 0.8; }
+        }
+        @keyframes stripeB {
+            from { transform: skewY(-15deg); opacity: 0.8; }
+            to { transform: skewY(15deg); opacity: 1; }
+        }
+        @keyframes river {
+            from { transform: translateX(0px); }
+            to { transform: translateX(50px); }
+        }
+        @keyframes swing {
+            from { transform: rotate(-2deg); }
+            to { transform: rotate(3deg); }
+        }
+        @keyframes navigate {
+            0% { transform: translateX(0px); }
+            25% { transform: translateX(220px) translateY(-20px); }
+            50% { transform: translateX(220px) translateY(-20px); }
+            100% { transform: translateX(650px); }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header> 
+        <h1>Usando Animations</h1>
+    </header>
+
+    <main>
+        <section style="text-align: center;">
+            <header.mainHeader>
+                <h2>Usando a propriedade animation</h2>
+            </header>
+            <article class="long">
+                <div class="cloud"></div>
+                <div class="castle"></div>
+                <div class="flagpole"></div>
+                <div class="flag">
+                    <div class="stripe1"></div>
+                    <div class="stripe2"></div>
+                    <div class="stripe1"></div>
+                    <div class="stripe2"></div>
+                </div>
+                <div class="river"></div>
+                <div class="boat">
+                    <img src="./img/boat.svg" alt="Veleiro" width="150">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Este material foi desenvolvido por <a href="mailto:webcursoprofessorluis@gmail.com" title="Enviar um e-mail">Luis Vulcanis</a> para o <a href="https://youtube.com/@professorluis" target="_blank" rel="noopener noreferrer">Canal do Prof. Luis Vulcanis</a> &copy; 2023.
+        </address>
+    </footer>
+    
+</body>
+</html>
